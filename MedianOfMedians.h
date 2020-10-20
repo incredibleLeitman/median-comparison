@@ -103,5 +103,13 @@ uint32_t pivot(std::vector<uint32_t> &v, uint32_t left, uint32_t right) {
 }
 
 uint32_t getMedianOfMedians(std::vector<uint32_t> v, uint32_t left, uint32_t right, uint32_t n) {
-    return v[findMedianOfMedians(v, left, right, n)];
+    uint32_t val = v[findMedianOfMedians(v, left, right, n)];
+    print(v);
+    return val;
+}
+
+uint32_t getPivotOfMedians(std::vector<uint32_t> v, uint32_t left, uint32_t right) {
+    uint32_t val = v[pivot(v, left, right)];
+    print(v);
+    return val;
 }

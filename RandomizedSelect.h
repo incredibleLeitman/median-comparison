@@ -45,5 +45,7 @@ uint32_t randomizedSelect(std::vector<uint32_t>& a, int p, int r, int i)
 
 uint32_t getRandomizedSelectMedian(std::vector<uint32_t> a, int p, int r, int i)
 {
-    return randomizedSelect(a, p, r, i);
+    uint32_t val = randomizedSelect(a, p, r, i);
+    print(a);
+    return val;
 }

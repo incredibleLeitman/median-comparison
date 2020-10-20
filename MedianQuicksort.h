@@ -21,6 +21,8 @@ void quicksort(std::vector<uint32_t>& a, int p, int r)
 uint32_t getQuicksortMedian(std::vector<uint32_t> a, int i)
 {
     //std::qsort(numbers); // only takes array param -> custom implementation with vector
-    quicksort(a, 0, a.size() - 1);
+    quicksort(a, 0, (int)a.size() - 1);
+
+    print(a);
     return a[i];
 }

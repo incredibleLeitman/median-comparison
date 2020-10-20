@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 
-// custom swap function for just pointer swapping (check difference)
+// custom swap function for just pointer swapping (TODO: check real difference)
 void swap(uint32_t* a, uint32_t* b)
 {
     uint32_t temp = *a;
@@ -23,8 +23,8 @@ int compare(const void* a, const void* b)
     return 0;
 }
 
-#define PARTITION_TYPE_LOMUTO
-//#define PARTITION_TYPE_HOARE
+//#define PARTITION_TYPE_LOMUTO
+#define PARTITION_TYPE_HOARE
 
 #ifdef PARTITION_TYPE_LOMUTO
 // Lomuto Partitioning
@@ -73,3 +73,17 @@ int partition(std::vector<uint32_t>& a, int p, int r)
     }
 }
 #endif
+
+//#define DEBUG_OUT
+
+void print(std::vector<uint32_t>& v)
+{
+#ifdef DEBUG_OUT
+    std::cout << "numbers: " << std::endl;
+    for (auto i : v)
+    {
+        std::cout << i << std::endl;
+    }
+#endif
+
+}

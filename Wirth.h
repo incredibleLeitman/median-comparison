@@ -5,7 +5,7 @@
 uint32_t getWirthKthSmallest(std::vector<uint32_t> a, uint32_t k)
 {
     uint32_t l = 0;
-    uint32_t m = a.size() - 1;
+    uint32_t m = (uint32_t)a.size() - 1;
 
     while (l < m) {
         uint32_t x = a[k];
@@ -27,5 +27,6 @@ uint32_t getWirthKthSmallest(std::vector<uint32_t> a, uint32_t k)
         if (k < i) m = j;
     }
 
+    print(a);
     return a[k];
 }
