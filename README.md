@@ -17,6 +17,8 @@ Then, run the program:
 ./mc
 ```
 
+For windows, Visual Studio project files are added -> just compile and run :D
+
 Example output is shown below.
 
 ## Example Output g++ with -O3 optimization
